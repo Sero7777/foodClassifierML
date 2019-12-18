@@ -19,10 +19,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPH-9Q-kA7">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="491"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-Ax-h35">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="491"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -34,15 +34,15 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD9-lM-dRj">
-                                        <rect key="frame" x="0.0" y="450" width="414" height="368"/>
+                                        <rect key="frame" x="0.0" y="572.5" width="414" height="245.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3p-rN-XMu">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=" ">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                                            <font key="NSFont" metaFont="menuBar"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -59,13 +59,14 @@
                                             <constraint firstItem="r3p-rN-XMu" firstAttribute="leading" secondItem="aD9-lM-dRj" secondAttribute="leading" id="JgE-ib-KNi"/>
                                             <constraint firstItem="IPc-Ab-sjH" firstAttribute="centerX" secondItem="aD9-lM-dRj" secondAttribute="centerX" id="LrE-7F-q4F"/>
                                             <constraint firstItem="r3p-rN-XMu" firstAttribute="top" secondItem="aD9-lM-dRj" secondAttribute="top" id="Ptg-f9-W0q"/>
+                                            <constraint firstItem="r3p-rN-XMu" firstAttribute="height" secondItem="aD9-lM-dRj" secondAttribute="height" id="SlA-a1-N6I"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLx-CZ-rYC">
-                                        <rect key="frame" x="0.0" y="368" width="414" height="82"/>
+                                        <rect key="frame" x="0.0" y="491" width="414" height="81.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rib-4z-WEz">
-                                                <rect key="frame" x="148.5" y="0.0" width="117" height="82"/>
+                                                <rect key="frame" x="148.5" y="0.0" width="117" height="81.5"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Choose a picture">
@@ -92,16 +93,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="aD9-lM-dRj" firstAttribute="height" secondItem="BPH-9Q-kA7" secondAttribute="height" id="05K-BY-TSG"/>
                                     <constraint firstItem="aD9-lM-dRj" firstAttribute="leading" secondItem="EHc-9J-BMN" secondAttribute="leading" id="0Sn-cW-yY5"/>
-                                    <constraint firstItem="BPH-9Q-kA7" firstAttribute="height" secondItem="EHc-9J-BMN" secondAttribute="height" multiplier="0.45" id="0x6-ug-soB"/>
+                                    <constraint firstItem="BPH-9Q-kA7" firstAttribute="height" secondItem="EHc-9J-BMN" secondAttribute="height" multiplier="0.6" id="0x6-ug-soB"/>
                                     <constraint firstAttribute="bottom" secondItem="aD9-lM-dRj" secondAttribute="bottom" id="BgY-cs-rMt"/>
                                     <constraint firstItem="r3p-rN-XMu" firstAttribute="width" secondItem="CXL-Ax-h35" secondAttribute="width" id="EO0-93-WKo"/>
                                     <constraint firstItem="nLx-CZ-rYC" firstAttribute="leading" secondItem="EHc-9J-BMN" secondAttribute="leading" id="Ht3-Q1-BPt"/>
                                     <constraint firstItem="BPH-9Q-kA7" firstAttribute="top" secondItem="EHc-9J-BMN" secondAttribute="top" id="MqF-ON-Tt9"/>
-                                    <constraint firstItem="r3p-rN-XMu" firstAttribute="height" secondItem="CXL-Ax-h35" secondAttribute="height" id="NDN-af-v4D"/>
                                     <constraint firstItem="nLx-CZ-rYC" firstAttribute="top" secondItem="BPH-9Q-kA7" secondAttribute="bottom" id="Q6U-Gh-Fbz"/>
                                     <constraint firstItem="aD9-lM-dRj" firstAttribute="width" secondItem="BPH-9Q-kA7" secondAttribute="width" id="cJe-73-4X2"/>
+                                    <constraint firstItem="aD9-lM-dRj" firstAttribute="height" secondItem="EHc-9J-BMN" secondAttribute="height" multiplier="0.3" id="eFX-fy-QNy"/>
                                     <constraint firstItem="BPH-9Q-kA7" firstAttribute="width" secondItem="EHc-9J-BMN" secondAttribute="width" id="fqn-fk-Mg9"/>
                                     <constraint firstItem="nLx-CZ-rYC" firstAttribute="width" secondItem="BPH-9Q-kA7" secondAttribute="width" id="g0X-b2-hlP"/>
                                     <constraint firstItem="nLx-CZ-rYC" firstAttribute="height" secondItem="EHc-9J-BMN" secondAttribute="height" multiplier="0.1" id="nxQ-SM-F37"/>
