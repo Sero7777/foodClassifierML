@@ -13,9 +13,12 @@
 		250829AD23857CA5002F1145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250829AB23857CA5002F1145 /* Main.storyboard */; };
 		250829AF23857CAA002F1145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250829AE23857CAA002F1145 /* Assets.xcassets */; };
 		250829B223857CAA002F1145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250829B023857CAA002F1145 /* LaunchScreen.storyboard */; };
+		250829BA238586D2002F1145 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250829B9238586D2002F1145 /* ImagePicker.swift */; };
+		29ED516F09D543C49F119136 /* Pods_foodClassifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81D26A4E206076B65D82910 /* Pods_foodClassifier.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E8A4979CC9A685E71DF67AA /* Pods-foodClassifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodClassifier.release.xcconfig"; path = "Target Support Files/Pods-foodClassifier/Pods-foodClassifier.release.xcconfig"; sourceTree = "<group>"; };
 		250829A223857CA5002F1145 /* foodClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		250829A523857CA5002F1145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		250829A723857CA5002F1145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		250829AE23857CAA002F1145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		250829B123857CAA002F1145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		250829B323857CAA002F1145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		250829B9238586D2002F1145 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5A899DDD20903C6F8CB5DC2B /* Pods-foodClassifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodClassifier.debug.xcconfig"; path = "Target Support Files/Pods-foodClassifier/Pods-foodClassifier.debug.xcconfig"; sourceTree = "<group>"; };
+		B81D26A4E206076B65D82910 /* Pods_foodClassifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodClassifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29ED516F09D543C49F119136 /* Pods_foodClassifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2312BCA37B7E82525B5B08EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B81D26A4E206076B65D82910 /* Pods_foodClassifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2508299923857CA5002F1145 = {
 			isa = PBXGroup;
 			children = (
 				250829A423857CA5002F1145 /* foodClassifier */,
 				250829A323857CA5002F1145 /* Products */,
+				D24D56A34FC70862132DBE8D /* Pods */,
+				2312BCA37B7E82525B5B08EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +80,19 @@
 				250829AE23857CAA002F1145 /* Assets.xcassets */,
 				250829B023857CAA002F1145 /* LaunchScreen.storyboard */,
 				250829B323857CAA002F1145 /* Info.plist */,
+				250829B9238586D2002F1145 /* ImagePicker.swift */,
 			);
 			path = foodClassifier;
+			sourceTree = "<group>";
+		};
+		D24D56A34FC70862132DBE8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A899DDD20903C6F8CB5DC2B /* Pods-foodClassifier.debug.xcconfig */,
+				1E8A4979CC9A685E71DF67AA /* Pods-foodClassifier.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 250829B623857CAA002F1145 /* Build configuration list for PBXNativeTarget "foodClassifier" */;
 			buildPhases = (
+				364937A81F3551BD510FE283 /* [CP] Check Pods Manifest.lock */,
 				2508299E23857CA5002F1145 /* Sources */,
 				2508299F23857CA5002F1145 /* Frameworks */,
 				250829A023857CA5002F1145 /* Resources */,
+				EDE829324CD77489F0BCF4B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +163,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		364937A81F3551BD510FE283 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-foodClassifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE829324CD77489F0BCF4B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-foodClassifier/Pods-foodClassifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-foodClassifier/Pods-foodClassifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-foodClassifier/Pods-foodClassifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2508299E23857CA5002F1145 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				250829AA23857CA5002F1145 /* ViewController.swift in Sources */,
+				250829BA238586D2002F1145 /* ImagePicker.swift in Sources */,
 				250829A623857CA5002F1145 /* AppDelegate.swift in Sources */,
 				250829A823857CA5002F1145 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +355,7 @@
 		};
 		250829B723857CAA002F1145 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A899DDD20903C6F8CB5DC2B /* Pods-foodClassifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		250829B823857CAA002F1145 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E8A4979CC9A685E71DF67AA /* Pods-foodClassifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
