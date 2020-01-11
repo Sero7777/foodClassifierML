@@ -29,8 +29,6 @@ class ViewController: UIViewController {
         
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         spinner.hidesWhenStopped = true
-
-        
     }
     
     
@@ -44,6 +42,7 @@ extension ViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
         self.imageView.image = image // hier Zugriff auf Image, kann an Backend weitergeleitet werden
+        self.textView.text = ""
         self.spinner.startAnimating()
 
         textView.textColor = UIColor.lightGray
@@ -57,12 +56,13 @@ extension ViewController: ImagePickerDelegate {
     
     private func postImage(image: UIImage){
          
-        let URL = "http://ec2-3-85-221-131.compute-1.amazonaws.com:5000/predict"
+//        let URL_dev = "http://ec2-3-85-221-131.compute-1.amazonaws.com:5000/predict"
+        let URL_prod = "http://ec2-54-162-98-100.compute-1.amazonaws.com:5000/predict"
         let imgData = image.jpegData(compressionQuality: 0.2)!
 
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "image", fileName: "image", mimeType: "image/jpg")
-            },to:URL, method: .post){ (result) in
+            },to:URL_prod, method: .post){ (result) in
             switch result {
             case .success(let upload, _, _):
 
@@ -70,20 +70,19 @@ extension ViewController: ImagePickerDelegate {
                     print("Upload Progress: \(progress.fractionCompleted)")
                 })
                 
-                
-
                 upload.responseJSON { response in
-                    let predictionsArray = response.result.value! as! String
-                    
-                    self.spinner.stopAnimating()
-                    self.textView.font = UIFont(name: self.textView.font.fontName, size: 30)
-                    self.textView.text = "It's a \(predictionsArray)!"
-                    
-                    print(predictionsArray)
-
-//                    self.textView.text = predictionsArray
-//                    let json = JSON(predictionsArray)
-//                    print(predictionsArray["preductions"])
+                    if let predictionsArray = response.result.value{
+                        let predictionsArrayAsString = predictionsArray as! String
+                        self.spinner.stopAnimating()
+                        self.textView.font = UIFont(name: self.textView.font.fontName, size: 30)
+                        self.textView.text = "\(predictionsArrayAsString)"
+                        print(predictionsArrayAsString)
+                        if (predictionsArrayAsString == "hotdog"){
+                            self.textView.backgroundColor = UIColor.green
+                        } else {
+                            self.textView.backgroundColor = UIColor.red
+                        }
+                    }
                 }
 
             case .failure(let encodingError):
