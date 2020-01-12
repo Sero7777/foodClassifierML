@@ -1,5 +1,3 @@
-# import the necessary packages
-#from keras.preprocessing.image import img_to_array
 from keras.preprocessing import image
 from keras.models import load_model
 from PIL import Image
@@ -15,16 +13,12 @@ def load():
 	model = load_model("Adadelta_87_85.h5")
 
 def prepare_image(img):
-
 	img = img.resize((64,64))
 	img_tensor = image.img_to_array(img)
 	img_tensor = np.expand_dims(img_tensor, axis=0)
 	img_tensor /= 255.
 
 	return img_tensor
-
-
-
 
 @app.route("/", methods=["GET"])
 def hello():
@@ -54,7 +48,5 @@ def predict():
 	return flask.jsonify(data)
 
 if __name__ == "__main__":
-	print(("* Loading Keras model and Flask starting server..."
-		"please wait until server has fully started"))
 	load()
 	app.run(host = '0.0.0.0', debug = False, threaded = False)
