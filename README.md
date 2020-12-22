@@ -1,6 +1,8 @@
+# -- The server is not running anymore --
+
 # Hotdog/Not Hotdog Classifier
 
-Classifying images into hotdog/not hotdog categories using CNN and Keras
+Classifying images into hotdog/not hotdog categories using CNN and Keras. Build from scratch, we did not use any pre-built models.
 
 ## Installation and usage guidelines (plug and play)
 
